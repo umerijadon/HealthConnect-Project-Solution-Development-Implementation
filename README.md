@@ -43,30 +43,6 @@ HealthConnect Clinic loses appointment slots whenever a patient books and doesn'
 
 ---
 
-## Repository Structure
-
-```
-.
-├── README.md
-├── HealthConnect_Appointment_Data.csv          # original dataset (untouched)
-├── HealthConnect_Data_Dictionary.xlsx
-├── notebooks/
-│   ├── HealthConnect_Week4_Notebook.ipynb      # problem understanding & initial data assessment
-│   └── HealthConnect_Week5_Notebook.ipynb      # data prep, feature engineering, baseline modelling
-├── processed/
-│   └── HealthConnect_Appointment_Data_cleaned.csv
-├── reports/
-│   ├── HealthConnect_Project_Summary_Week4.docx
-│   └── HealthConnect_Project_Summary_Week5.docx
-└── charts/
-    ├── 01_target_distribution_and_age.png
-    ├── 02_lead_time_and_noshow_history.png
-    ├── 03_correlation_heatmap.png
-    └── 04_model_evaluation_confusion_roc.png
-```
-
----
-
 ## Week 4 — Problem Understanding & Initial Assessment
 
 - Confirmed the dataset is structurally clean: no duplicate IDs, no logical inconsistencies (`previous_no_shows` never exceeds `previous_appointments`; `booking_lead_days` is never negative).
@@ -148,12 +124,6 @@ Logistic regression is the strongest and most interpretable baseline at this sta
 ## Tools Used
 
 `Python` · `Pandas` · `NumPy` · `Matplotlib` · `Scikit-learn` · `Jupyter Notebook`
-
----
-
-## Cross-Track Collaboration
-
-Compared notes with the **Data Analytics** track on their Week 5 KPI work (overall no-show rate, no-show rate by reminder status and prior history) to keep both tracks' reported figures consistent. This also informed the decision to keep `reminder_channel` at its full category detail rather than collapsing it to a yes/no flag, since channel-level differences may be worth exploring further.
 
 ---
 
