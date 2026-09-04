@@ -51,8 +51,6 @@ HealthConnect Clinic loses appointment slots whenever a patient books and doesn'
 - Missing values limited to three columns; `reminder_channel`'s gap found to be structural rather than random.
 - `waiting_time_minutes` flagged as a possible timing/leakage risk, pending a decision on when it's actually recorded.
 
-📄 Full write-up: [`reports/HealthConnect_Project_Summary_Week4.docx`](./reports/HealthConnect_Project_Summary_Week4.docx) · [`notebooks/HealthConnect_Week4_Notebook.ipynb`](./notebooks/HealthConnect_Week4_Notebook.ipynb)
-
 ---
 
 ## Week 5 — Data Preparation, Feature Engineering & Baseline Modelling
@@ -89,15 +87,6 @@ Patients appear more than once in the dataset. A plain row-level split risks the
 | Decision Tree (depth=5) | 0.617 | 0.613 | 0.636 | 0.624 | 0.663 |
 
 Logistic regression is the strongest and most interpretable baseline at this stage. Top risk-increasing factor: `previous_no_shows`. Top risk-reducing factors: `no_show_rate_history` and `reminder_sent`.
-
-📄 Full write-up: [`reports/HealthConnect_Project_Summary_Week5.docx`](./reports/HealthConnect_Project_Summary_Week5.docx) · [`notebooks/HealthConnect_Week5_Notebook.ipynb`](./notebooks/HealthConnect_Week5_Notebook.ipynb)
-
-### Charts
-
-| | |
-|---|---|
-| ![Target distribution and age](./charts/01_target_distribution_and_age.png) | ![Lead time and no-show history](./charts/02_lead_time_and_noshow_history.png) |
-| ![Correlation heatmap](./charts/03_correlation_heatmap.png) | ![Model evaluation](./charts/04_model_evaluation_confusion_roc.png) |
 
 ---
 
